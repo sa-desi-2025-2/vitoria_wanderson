@@ -1,5 +1,5 @@
 <?php
-    require_once __DIR__ . 'conexao.php';
+    require_once __DIR__ . '/conexao.php';
 
 Class Usuario {
 
@@ -49,6 +49,12 @@ Class Usuario {
     }
     public function setRe($re) {
         $this->re = $re;
+    }
+    public function getSetor() {
+        return $this->setor;
+    }
+    public function setSetor($setor) {
+        $this->re = $setor;
     }
 
     public function getSenha() {
