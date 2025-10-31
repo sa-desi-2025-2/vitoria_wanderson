@@ -19,9 +19,9 @@
     <div>
         <h2>DashCore</h2>
 
-        <label>Nome ou Email do usuário:</label>
+        <label>RE do usuario:</label>
         <br>
-        <input type="text" placeholder="Nome de usuário" id="">
+        <input type="text" placeholder="RE" id="">
         <br>
         <label>Senha:</label>
         <br>
