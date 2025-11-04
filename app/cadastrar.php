@@ -109,6 +109,12 @@ Class Usuario {
         }
     }
 
+    public function buscarPorLogin($login): PDOStatement  {
+        $consulta = $this->conexao->prepare("SELECT id_usuario, senha, admin FROM usuarios WHERE login = ?");
+        $consulta->execute([$login]);
+        return $consulta;
+    }
+
     public function buscarPorEmail($email): PDOStatement  {
         $consulta = $this->conexao->prepare("SELECT id_usuario, senha, admin FROM usuarios WHERE email = ?");
         $consulta->execute([$email]);
