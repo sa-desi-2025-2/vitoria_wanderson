@@ -1,0 +1,9 @@
+{
+<<<<<<< HEAD
+    "name": "vitoria_de-machado/vitoria_wanderson",
+=======
+>>>>>>> Wandi
+    "require": {
+        "phpoffice/phpspreadsheet": "^5.2"
+    }
+}
