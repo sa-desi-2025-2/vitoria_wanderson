@@ -1,3 +1,7 @@
+<?php
+    require_once __DIR__ . '/../app/config.php'; 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,11 +10,8 @@
     <title>Document</title>
 </head>
 <body>
-    <div>
-        <form method="post" action="app/gateway.php">
-            <input type="submit" value="CONECTAR">
-        </form>
-    </div>
     
 </body>
 </html>
+
+<?php session_start()?>
