@@ -1,0 +1,6 @@
+{
+    "name": "vitoria_de-machado/vitoria_wanderson",
+    "require": {
+        "phpoffice/phpspreadsheet": "^5.2"
+    }
+}

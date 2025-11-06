@@ -37,6 +37,7 @@ class Usuario{
         $this->usuario = new Usuario();
         $resultado = $this->usuario->buscarPorLogin($this->login);
 
+
         if($resultado->rowCount() == 1){
 
             $resultado = $resultado->fetch();

@@ -1,4 +1,6 @@
 <?php
+
+
  namespace App;
 
  use PhpOffice\PhpSpreadsheet\IOFactory;
@@ -7,6 +9,7 @@
 
  class Planilhas{
     public function processarArquivo($arquivo): array{
+
         $destino = __DIR__ . '/../uploads/' . basename($arquivo['name']);
         if (!is_dir(dirname($destino))) {
             mkdir(dirname($destino), 0777, true);
