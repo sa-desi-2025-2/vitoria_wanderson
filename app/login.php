@@ -11,7 +11,7 @@ class Usuario{
 
     public function getSenha (){
 
-        return $thiss->senha;
+        return $this->senha;
     }
 
     public function setSenha($senha){
@@ -35,13 +35,13 @@ class Usuario{
         $this->login = $_POST["login"];
         $this->senha = $_POST["senha"];
         $this->usuario = new Usuario();
-        $resultado = $this->usuario->buscarPorEmail($this->email;);
+        $resultado = $this->usuario->buscarPorLogin($this->login);
 
         if($resultado->rowCount() == 1){
 
             $resultado = $resultado->fetch();
 
-            if($resultado['senha'] === hash('sha512', $this->senha;)){
+            if($resultado['senha'] === hash('sha512', $this->senha)){
 
                 session_start();
                 $_SESSION['id_usuario'] = $resultado['id_usuario'];
@@ -53,18 +53,17 @@ class Usuario{
 
                 return 0;
             
-            }else{
-
-                return 0;
             }
         }
 
-        public function deslogar(){
-            session_destroy();
-            header("location:.../index.html");
-        }
-
+        
     }
+
+    public function deslogar(){
+        session_destroy();
+        header("location:.../index.html");
+    }
+
 
 
 }
