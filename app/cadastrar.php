@@ -1,7 +1,7 @@
 <?php
     require_once __DIR__ . '/conexao.php';
 
-Class Usuario {
+Class Cadastro {
 
     private $conexao;
 

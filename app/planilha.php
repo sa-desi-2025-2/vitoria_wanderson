@@ -1,11 +1,12 @@
 <?php
- namespace Classes;
+ namespace App;
 
- use PhpOffice/PhpSpreadsheet/IOFactory;
- use Classes/Conexao;
+ use PhpOffice\PhpSpreadsheet\IOFactory;
+ use App\conexao;
+ 
 
  class Planilhas{
-    public function processarArquivo($Arquivo): array{
+    public function processarArquivo($arquivo): array{
         $destino = __DIR__ . '/../uploads/' . basename($arquivo['name']);
         if (!is_dir(dirname($destino))) {
             mkdir(dirname($destino), 0777, true);

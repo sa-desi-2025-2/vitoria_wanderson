@@ -36,7 +36,7 @@ Class Login {
     public function login(){
         $this->email = $_POST["email"];
         $this->senha = $_POST["senha"];
-        $this->re    = $_POST ["re"] 
+        $this->re    = $_POST ["re"];
         $this->usuario = new Usuario();
         $resultando = $this->usuario->buscarPorEmail($this->email);
         

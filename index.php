@@ -1,7 +1,7 @@
 <?php
 
-require_once __DIR__ . '/app/config.php';
-require_once __DIR__ . '/app/gateway.php';
+require_once __DIR__ . "/app/config.php";
+require_once __DIR__ . "/app/gateway.php";
 
 
 ini_set('display_errors', 1);
@@ -9,9 +9,15 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 $gateway = new Gateway();
+
+
 $acao = $_REQUEST['acao'] ?? '';
+
 if ($acao) {
+
     $gateway->run();
-    exit; 
+    exit;
+
 }
-require_once __DIR__ . '/public/logar.php';
+
+require_once __DIR__ . "/public/logar.php";

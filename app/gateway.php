@@ -1,12 +1,13 @@
 <?php
 
-require __DIR__ . '/vendor/autoload.php';
-require __DIR__ . '/planilha.php';
-require_once __DIR__ . "/conexao.php";
-require_once __DIR__ . "/cadastrar.php";
-require_once __DIR__ . "usuario.php";
+require_once __DIR__ . '../vendor/autoload.php';
+require_once __DIR__ . '/planilha.php';
+require_once __DIR__ . '/conexao.php';
+require_once __DIR__ . '/cadastrar.php';
+require_once __DIR__ . '/usuario.php';
 
-class Getaway {
+
+class Gateway {
 
 
    public function run(){
@@ -55,7 +56,7 @@ class Getaway {
                exit;
             }
 
-            $service = new PlanilhaService();
+            $service = new Planilhas();
             $resultado = $service->processarArquivo($_FILES['arquivo']);
             echo json_encode($resultado, JSON_UNESCAPED_UNICODE);
             break;
@@ -70,7 +71,7 @@ class Getaway {
                exit;
             }
 
-            $service = new PlanilhaService();
+            $service = new Planilhas();
             $resultado = $service->salvarNoBanco($dados);
             echo json_encode($resultado, JSON_UNESCAPED_UNICODE);
             break;

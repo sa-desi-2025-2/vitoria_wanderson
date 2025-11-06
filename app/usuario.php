@@ -1,7 +1,7 @@
 <?php
 
-require_once __DIR__ ."conexao.php";
-
+require_once __DIR__ . '/conexao.php';
+require_once __DIR__ . '/cadastrar.php';
 class Usuario{
 
     private Usuario $usuario;
