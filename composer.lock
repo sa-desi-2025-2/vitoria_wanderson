@@ -4,11 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-<<<<<<< HEAD
-    "content-hash": "c908b7a051936fe938d4129689dfa17b",
-=======
     "content-hash": "7eb83432d786fef27ebc95ccdb020968",
->>>>>>> Wandi
     "packages": [
         {
             "name": "composer/pcre",
