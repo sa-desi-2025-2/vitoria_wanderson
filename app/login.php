@@ -1,64 +1,74 @@
 <?php
 
-require_once __DIR__ . '/Conexao.php';
+require_once __DIR__ ."conexao.php";
 
-Class Login {
+class Usuario{
+
     private Usuario $usuario;
     public function __construct() {}
+    private $login;
     private $senha;
-    private $email;
-    private $re;
-   
-    public function getSenha() {
-    return $this->senha;
-}
 
-    public function setSenha($senha) {
+    public function getSenha (){
+
+        return $thiss->senha;
+    }
+
+    public function setSenha($senha){
+
         $this->senha = $senha;
     }
 
-    public function getEmail() {
-        return $this->email;
+    public function getLogin(){
+
+        return $this->login;
+
     }
 
-    public function setEmail($email) {
-        $this->email = $email;
+    public function setLogin($login){
+
+        $this->login;
     }
 
-    public function getRe(){
-        return $this->re;
-    }
-    
-    public function setRe($re) {
-        $this->re = $re;
-    }
+    public function logar(){
 
-    public function login(){
-        $this->email = $_POST["email"];
+        $this->login = $_POST["login"];
         $this->senha = $_POST["senha"];
-        $this->re    = $_POST ["re"]; 
         $this->usuario = new Usuario();
-        $resultando = $this->usuario->buscarPorEmail($this->email);
-        
-        if ($resultando->rowCount() == 1) {
+        $resultado = $this->usuario->buscarPorEmail($this->email);
 
-            $resultado = $resultando->fetch();
+        if($resultado->rowCount() == 1){
 
-            if ($resultado['senha_usuario'] === hash('sha512', $this->senha)) {
+            $resultado = $resultado->fetch();
+
+            if($resultado['senha'] === hash('sha512', $this->senha;)){
+
                 session_start();
-                $_SESSION['pk_usuario'] = $resultado['pk_usuario'];
-                $_SESSION['eh_adm_usuario'] = $resultado['eh_adm_usuario'];
+                $_SESSION['id_usuario'] = $resultado['id_usuario'];
+                $_SESSION['admin'] = $resultado['admin'];
                 $_SESSION['loggedin'] = true;
                 return 1;
-            } else {
+            
+            }else{
+
+                return 0;
+            
+            }else{
+
                 return 0;
             }
-        } else {
-            return 0;
         }
-    }
-    public function logout(){
+
+        public function deslogar(){
             session_destroy();
-            header("location:../index.html");
+            header("location:.../index.html");
+        }
+
     }
+
+
 }
+
+
+?>
+>>>>>>> 7ef3ba88121c778ba091d1f6b9f95f2bb79da453
