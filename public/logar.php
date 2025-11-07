@@ -28,7 +28,7 @@
         <input type="password" placeholder="12345678" id="">
         <br>
         <button type="submit" a href="http://localhost:8080/vitoria_wanderson/public/home.php">Fazer login</button>
-        <a href="http://localhost:8080/vitoria_wanderson/public/cadastrar.php">Cadastrar</a>
+        <a href="http://localhost:8080/vitoria_wanderson/public/cadastro.php">Cadastrar</a>
 
 
     </div>

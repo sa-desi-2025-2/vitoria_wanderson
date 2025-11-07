@@ -1,10 +1,10 @@
 <?php
 
-
  namespace App;
 
+//  require __DIR__ . '/vendor/autoload.php';
  use PhpOffice\PhpSpreadsheet\IOFactory;
- use App\conexao;
+ use App\Conexao;
  
 
  class Planilhas{
