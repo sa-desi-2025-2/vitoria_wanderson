@@ -17,7 +17,7 @@
 <?php session_start()?>
 
 <div>
-    <form method="POST" action="<?= BASE_URL ?>/index.php?acao=inserir">
+    <form method="POST" action="<?= BASE_URL ?>../app/gateway.php?acao=criarUsuario">
         <div>
 
         <label>Login</label>

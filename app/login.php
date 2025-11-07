@@ -1,8 +1,8 @@
 <?php
 
-require_once __DIR__ ."conexao.php";
+require_once __DIR__ ."/conexao.php";
 
-class Usuario{
+class Login{
 
     private Usuario $usuario;
     public function __construct() {}
@@ -27,7 +27,7 @@ class Usuario{
 
     public function setLogin($login){
 
-        $this->login;
+        $this->login = $login;
     }
 
     public function logar(){
@@ -35,7 +35,7 @@ class Usuario{
         $this->login = $_POST["login"];
         $this->senha = $_POST["senha"];
         $this->usuario = new Usuario();
-        $resultado = $this->usuario->buscarPorLogin($this->login);
+        $resultado = $this->usuario->buscarPorLogin_usuario($this->login);
 
 
         if($resultado->rowCount() == 1){
