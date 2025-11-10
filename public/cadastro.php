@@ -40,9 +40,6 @@
         <br>
         <input type="password" name="senha">
         <br>
-        <label>Admin?</label>
-        <input type="checkbox" name="admin">
-        <br>
         <br>
         <input type="submit" value="Cadastrar">
 

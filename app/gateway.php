@@ -21,21 +21,19 @@ use App\Planilhas;
 
 
             case 'entrar':
-               if (verificarLogin()) {
 
-                  $login = new Login();
+               
+               $login = new Login();
 
-                  if ($login->logar()) {
+               if ($login->logar()) {
 
-                     header("Location: index.php?acao=mostrarUsuario");
-                     exit;
-                  } else {
+                  header("Location: ../public/home.php");
+                  
+               } else {
 
-                     echo "Login ou senha inválidos";
-                  }
-                  break;
-
+                  echo "Login ou senha inválidos";
                }
+               break;
 
             case 'sair':
 
@@ -94,7 +92,7 @@ use App\Planilhas;
                   $usuario->setSenha($_POST['senha'] ?? '');
                   echo "senha";
                   $usuario->criarUsuario();
-                  header('Location: public/cadastro.php');
+                  header('Location: ../public/cadastro.php');
                   exit;
                }
                break;
@@ -118,7 +116,7 @@ use App\Planilhas;
 
    function verificarLogin()
    {
-      if (!isset($_SESSION['pk_usuario'])) {
+      if (!isset($_SESSION['id_usuario'])) {
          header('HTTP/1.1 403 Forbidden');
          exit('Acesso negado');
       }
