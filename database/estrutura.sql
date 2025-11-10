@@ -9,13 +9,13 @@ CREATE TABLE fabricas (
     nome_fabrica VARCHAR(5)
 );
 
-CREATE TABLE setores (
+-- CREATE TABLE setores (
 
-     id_set INT AUTO_INCREMENT PRIMARY KEY,
-    nome_setor VARCHAR(20),
-    id_fabrica INT,
-    FOREIGN KEY (id_fabrica) REFERENCES fabricas(id_fab)
-);
+--      id_set INT AUTO_INCREMENT PRIMARY KEY,
+--     nome_setor VARCHAR(20),
+--     id_fabrica INT,
+--     FOREIGN KEY (id_fabrica) REFERENCES fabricas(id_fab)
+-- );
 
 
 CREATE TABLE usuarios (
@@ -24,10 +24,9 @@ CREATE TABLE usuarios (
     login VARCHAR(20),
     email VARCHAR(20),
     RE INT(8),
-    senha VARCHAR(20),
-    admin BIT,
-    id_setor INT,
-    FOREIGN KEY (id_setor) REFERENCES setores(id_set)
+    setor VARCHAR(20),
+    senha VARCHAR(500),
+    admin BIT
 );
 
 
