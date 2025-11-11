@@ -136,9 +136,3 @@ use App\Planilhas;
       return $_SERVER['REQUEST_METHOD'] === 'GET';
 
    }
-
-
-
-
-
-
