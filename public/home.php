@@ -26,11 +26,22 @@
 
     <div>
 
-        <button>Criar gráfico</button>
+
+    <form>
+
+        <input type="file" id="arquivo" name="arquivo" accept=".xlsx,.xls,.csv,.ods" required>
+        <button type="button" id="CriarGrafico">Criar gráfico</button>
+
+    </form>
 
         <div>
+            <h2>Gráficos</h2>
 
+            <div id="grafico-container">
 
+                <a>Nenhum gráfico adicionado no momento</a>
+
+            </div>
         </div>
 
 
