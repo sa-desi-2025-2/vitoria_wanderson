@@ -3,11 +3,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const id = event.target.id;
 
         if (id === 'CriarGrafico') {
-            const { inicializarUpload } = await import('./arquivos.js');
-            const { renderizarGrafico } = await import('./graficos.js');
-            const dados = await inicializarUpload();
+            const { escolherArquivo } = await import('./arquivos.js');
+            const { carregarGraficos } = await import('./graficos.js');
+            const dados = await escolherArquivo();
             if (dados) 
-                renderizarGrafico(dados);
+                carregarGraficos(dados);
 
         } else if (id === 'lerGoogle') {
             const { inicializarGoogleSheets } = await import('./googleSheets.js');

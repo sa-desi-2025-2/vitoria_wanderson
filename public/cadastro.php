@@ -42,6 +42,7 @@
         <br>
         <br>
         <input type="submit" value="Cadastrar">
+        <a href="http://localhost:8080/vitoria_wanderson/public/logar.php">Voltar</a>
 
         </div>
 
