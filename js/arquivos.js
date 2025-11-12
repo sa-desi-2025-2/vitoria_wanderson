@@ -1,3 +1,4 @@
+
 export async function escolherArquivo() {
     const arquivo = document.getElementById('arquivo').files[0];
     if (!arquivo) {
@@ -5,7 +6,7 @@ export async function escolherArquivo() {
         return;
     }
 
-    const btn = document.getElementById('uploadBtn');
+    const btn = document.getElementById('CriarGrafico');
     btn.disabled = true;
     btn.textContent = 'Carregando...';
 
@@ -16,7 +17,7 @@ export async function escolherArquivo() {
     try {
         const resposta = await fetch('gateway.php', { method: 'POST', body: formData });
         const dados = await resposta.json();
-        const { renderizarTabela } = await import('./tabela.js');
+        const { renderizarTabela } = await import('./tabelas.js');
         renderizarTabela(dados);
         return dados;
     } catch (erro) {
