@@ -12,7 +12,7 @@
             align-items: center;
             min-height: 100vh;
             margin: 0;
-            background-color: #f4f4f4;
+            background-color: #9900FF;
         }
         .container {
             background-color: #fff;
@@ -88,7 +88,7 @@
 <div class="container">
     <h1>Cadastre-se</h1>
     
-    <form action="http://localhost:8080/vitoria_wanderson/public/processar_cadastro.php" method="POST">
+    
         
         <div class="form-group">
             <label for="nome">Nome</label>
