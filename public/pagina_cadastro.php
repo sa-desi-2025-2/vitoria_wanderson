@@ -58,6 +58,18 @@
             flex-grow: 1; 
             margin: 0 5px; 
         }
+        a {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            flex-grow: 1; 
+            margin: 0 5px; 
+            text-decoration: none;
+            
+        
+        }
         button:first-child { margin-left: 0; }
         button:last-child { margin-right: 0; }
 
@@ -69,10 +81,6 @@
             background-color: #4CAF50;
             color: white;
         }
-        .btn-sair {
-            background-color: #2196F3;
-            color: white;
-        }
     </style>
 </head>
 <body>
@@ -80,7 +88,7 @@
 <div class="container">
     <h1>Cadastre-se</h1>
     
-    <form action="/processar_cadastro" method="POST">
+    <form action="http://localhost:8080/vitoria_wanderson/public/processar_cadastro.php" method="POST">
         
         <div class="form-group">
             <label for="nome">Nome</label>
@@ -103,11 +111,10 @@
         </div>
 
         <div class="button-group">
-            <button type="reset" class="btn-cancelar">Cancelar</button>
+            <a href="http://localhost:8080/vitoria_wanderson/public/pagina_login.php" class="btn-cancelar">Cancelar</a>
+             <button type="submit" class="btn-cadastrar">Cadastrar</button>
             
-            <button type="submit" class="btn-cadastrar">Cadastrar</button>
             
-            <button type="button" class="btn-sair" onclick="alert('Funcionalidade de Sair. Redirecionamento deve ser implementado via JavaScript.');">"Sair</button>
         </div>
     </form>
 </div>

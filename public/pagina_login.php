@@ -81,10 +81,7 @@
             color: white;
         }
 
-        .btn-sair {
-            background-color: #6c757d; 
-            color: white;
-        }
+
     </style>
 </head>
 <body>
@@ -101,13 +98,9 @@
             <input type="password" id="password" name="password" required>
         </div>
 
-        <button type="submit" class="btn-login">Entrar</button>
-
         <div class="button-group">
-            <button type="button" class="btn-cancelar" onclick="alert('Operação Cancelada!')">Cancelar</button>
+            <button type="submit" class="btn-login" onclick="alert('Usuário Logado com Sucesso!')">Login</button>
             <button type="button" class="btn-cadastrar" onclick="alert('Redirecionando para a página de Cadastro...')">Cadastrar</button>
-            <button type="button" class="btn-sair" onclick="alert('Encerrando Sessão / Fechando Aplicação!')">Sair</button>
-        </div>
     </form>
 </div>
 
