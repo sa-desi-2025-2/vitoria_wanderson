@@ -1,3 +1,7 @@
+<?php
+    require_once __DIR__ . '/../app/config.php'; 
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -8,7 +12,7 @@
         
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-color: #9900FF;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -87,7 +91,7 @@
 <body>
 
 <div class="login-container">
-    <h2>Acesso ao Sistema</h2>
+    <h2>Acesso ao Dashcore</h2>
     <form action="#" method="POST">
         <div class="input-group">
             <label for="username">Usuário:</label>
@@ -97,7 +101,7 @@
             <label for="password">Senha:</label>
             <input type="password" id="password" name="password" required>
         </div>
-
+       
         <div class="button-group">
             <button type="submit" class="btn-login" onclick="alert('Usuário Logado com Sucesso!')">Login</button>
             <button type="button" class="btn-cadastrar" onclick="alert('Redirecionando para a página de Cadastro...')">Cadastrar</button>

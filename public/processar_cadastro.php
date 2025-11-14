@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+<?php
+    require_once __DIR__ . '/../app/config.php'; 
+?>
+ 
+ <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">

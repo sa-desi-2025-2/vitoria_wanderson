@@ -92,7 +92,7 @@ use App\Planilhas;
                   $usuario->setSenha($_POST['senha'] ?? '');
                   echo "senha";
                   $usuario->criarUsuario();
-                  header('Location: ../public/cadastro.php');
+                  header('Location: ../public/pagina_cadastro.php');
                   exit;
                }
                break;

@@ -1,3 +1,7 @@
+<?php
+    require_once __DIR__ . '/../app/config.php'; 
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -88,13 +92,18 @@
 <div class="container">
     <h1>Cadastre-se</h1>
     
-    
+     <form method="POST" action="<?= BASE_URL ?>/app/gateway.php?acao=criarUsuario">
         
         <div class="form-group">
             <label for="nome">Nome</label>
             <input type="text" id="nome" name="nome" required>
         </div>
         
+         <div class= "from-group">
+            <label for="re">Re</label>
+            <input type="text" id="re" required>
+            </div> 
+
         <div class="form-group">
             <label for="email">Email</label>
             <input type="email" id="email" name="email" required>
