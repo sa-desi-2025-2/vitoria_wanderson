@@ -7,8 +7,6 @@ require_once __DIR__ . "/cadastrar.php";
 require_once __DIR__ . "/login.php";
 use App\Planilhas;
 
-
-
       session_start();
 
       $acao = $_REQUEST["acao"] ?? '';
@@ -16,9 +14,6 @@ use App\Planilhas;
       try {
 
          switch ($acao) {
-
-
-
 
             case 'entrar':
 

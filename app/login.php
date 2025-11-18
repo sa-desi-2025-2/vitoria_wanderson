@@ -32,8 +32,8 @@ class Login{
 
     public function logar(){
 
-        $this->login = $_POST["login"];
-        $this->senha = $_POST["senha"];
+        $this->login = $_POST['login'];
+        $this->senha = $_POST['senha'];
         $this->usuario = new Usuario();
         $resultado = $this->usuario->buscarPorLogin_usuario($this->login);
 

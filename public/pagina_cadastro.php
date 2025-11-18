@@ -96,7 +96,7 @@
         
         <div class="form-group">
             <label for="nome">Nome</label>
-            <input type="text" id="nome" name="nome" required>
+            <input type="text" id="nome" name="login" required>
         </div>
         
          <div class= "from-group">
